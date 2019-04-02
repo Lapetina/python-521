@@ -1,27 +1,17 @@
-<!DOCTYPE html>
-<html>
-  	<head>
-		<meta charset="utf-8">
-		<title> Flask!</title>
-		<link href="/static/style.css" type="text/css" rel="stylesheet">
-	</head>
-	<body>
-		<marquee><b>Flask! - {{nome}}</b></marquee>
-		<table>
-			<tr>
-				<th>ID</th>
-				<th>NOME</th>
-			</tr>
-			<tr>
-				<th>1</th>
-				<th>Jiddu Krishnamurti</th>
-			</tr>
-			{% for u in usuarios %}
-			<tr>
-				<th>{{u.id}}</th>
-				<th>{{u.nome}}</th>
-			</tr>
-			{% endfor %}
-		</table>
-  	</body>
-</html>
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+{% block main %}
+<table>
+	<tr>
+		<th>ID</th>
+		<th>NOME</th>
+	</tr>
+	{% for u in usuarios %}
+	<tr>
+		<th>{{u.id}}</th>
+		<th>{{u.nome}}</th>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock main %}
+{% block atoa %}{% endblock atoa %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+		<meta charset="utf-8">
+		<title> Flask - {% block title %}{% endblock title %}</title>
+		<link href="/static/style.css" type="text/css" rel="stylesheet">
+	</head>
+	<body>
+		<marquee><b>Flask!</b></marquee>
+		{% block main %}{% endblock main %}
+		{% block atoa %}
+		<h1> Eu cheguei primeiro!</h1>
+		{% endblock atoa %}
+		{% include 'js.html' %}
+  	</body>
+</html>
